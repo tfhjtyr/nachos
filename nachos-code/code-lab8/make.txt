@@ -1,0 +1,32 @@
+cd threads; make depend
+make[1]: Entering directory `/home/elrid/Desktop/code/code-lab4/threads'
+g++ -I../threads -I../machine -DTHREADS -DHOST_i386 -DCHANGED -M ../threads/main.cc ../threads/list.cc ../threads/scheduler.cc ../threads/synch.cc ../threads/synchlist.cc ../threads/system.cc ../threads/thread.cc ../threads/utility.cc ../threads/threadtest.cc ../machine/interrupt.cc ../machine/sysdep.cc ../machine/stats.cc ../machine/timer.cc > makedep
+echo '/^# DO NOT DELETE THIS LINE/+2,$d' >eddep
+echo '$r makedep' >>eddep
+echo 'w' >>eddep
+ed - Makefile < eddep
+rm eddep makedep 
+echo '# DEPENDENCIES MUST END AT END OF FILE' >> Makefile
+echo '# IF YOU PUT STUFF HERE IT WILL GO AWAY' >> Makefile
+echo '# see make depend above' >> Makefile
+make[1]: Leaving directory `/home/elrid/Desktop/code/code-lab4/threads'
+cd threads; make nachos
+make[1]: Entering directory `/home/elrid/Desktop/code/code-lab4/threads'
+make[1]: `nachos' is up to date.
+make[1]: Leaving directory `/home/elrid/Desktop/code/code-lab4/threads'
+cd userprog; make depend 
+make[1]: Entering directory `/home/elrid/Desktop/code/code-lab4/userprog'
+g++ -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_i386 -DCHANGED -M ../threads/main.cc ../threads/list.cc ../threads/scheduler.cc ../threads/synch.cc ../threads/synchlist.cc ../threads/system.cc ../threads/thread.cc ../threads/utility.cc ../threads/threadtest.cc ../machine/interrupt.cc ../machine/sysdep.cc ../machine/stats.cc ../machine/timer.cc ../userprog/addrspace.cc ../userprog/bitmap.cc ../userprog/exception.cc ../userprog/progtest.cc ../machine/console.cc ../machine/machine.cc ../machine/mipssim.cc ../machine/translate.cc > makedep
+echo '/^# DO NOT DELETE THIS LINE/+2,$d' >eddep
+echo '$r makedep' >>eddep
+echo 'w' >>eddep
+ed - Makefile < eddep
+rm eddep makedep 
+echo '# DEPENDENCIES MUST END AT END OF FILE' >> Makefile
+echo '# IF YOU PUT STUFF HERE IT WILL GO AWAY' >> Makefile
+echo '# see make depend above' >> Makefile
+make[1]: Leaving directory `/home/elrid/Desktop/code/code-lab4/userprog'
+cd userprog; make nachos 
+make[1]: Entering directory `/home/elrid/Desktop/code/code-lab4/userprog'
+g++ -g -Wall -Wshadow  -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_i386 -DCHANGED  -c ../userprog/exception.cc
+make[1]: Leaving directory `/home/elrid/Desktop/code/code-lab4/userprog'

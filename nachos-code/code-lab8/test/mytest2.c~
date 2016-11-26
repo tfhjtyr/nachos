@@ -1,0 +1,37 @@
+#include "syscall.h"
+
+int 
+main()
+{
+	int shmid;
+	char* addr;
+	shmid = Shmget(0, 4);
+	addr = Shmat(shmid);
+	Write(addr, 4, ConsoleOutput);
+	Exit(0);
+}
+
+int spaceId;
+char* executable;
+
+/*executable = "mytest";
+	Fork(func);
+	Yield();*/
+
+/*void func()
+{
+	spaceId = Exec(executable);
+	Join(spaceId);	
+	Exit(0);
+}*/
+
+
+
+/*int 
+main()
+{
+	int spaceId;
+	spaceId = Exec("mytest");	
+	Join(spaceId);
+	Exit(0);
+}*/
